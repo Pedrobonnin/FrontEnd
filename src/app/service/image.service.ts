@@ -18,6 +18,7 @@ export class ImageService {
     uploadBytes(imgRef, file)
       .then(response => { this.getImages() })
       .catch(error => console.log(error))
+
   }
 
   getImages() {
@@ -30,7 +31,7 @@ export class ImageService {
           const url = `${urla} | ${name}`;
           // console.log("La URL con nombre es:", url);
           if (name === this.selectedImageName) {
-            this.url = url;
+            this.url = url;    
           }
         }));
       })

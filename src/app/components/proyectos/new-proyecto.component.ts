@@ -42,7 +42,8 @@ export class NewProyectoComponent {
   }
 
   onCreate(): void {
-    const proyec = new Proyecto( this.nameProy, this.detailsProy, this.repoUrlProy, this.siteUrlProy, this.imgUrlProy = this.imageService.url , this.toolsProy);
+    const proyec = new Proyecto( this.nameProy, this.detailsProy, this.repoUrlProy, this.siteUrlProy, this.imgUrlProy , this.toolsProy);
+    this.imgUrlProy = this.hasSelectedFile() ? this.imageService.url : this.imgUrlProy;
     console.log(proyec);
     this.proyService.save(proyec)
     .pipe(
@@ -80,6 +81,11 @@ export class NewProyectoComponent {
       alert('La cantidad máxima de caracteres permitidos es ' + maxLength);
       input.value = input.value.substring(0, maxLength); // recorta el texto a la cantidad máxima permitida
     }
+  }
+
+  hasSelectedFile(): boolean {
+    const input = document.getElementById('imgProy') as HTMLInputElement;
+    return input.files && input.files.length > 0;
   }
 
   public isCursorOnDeleteButton = false;

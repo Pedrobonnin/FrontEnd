@@ -1,29 +1,30 @@
-<div class="container form-horizontal" > <!-- *ngIf="proy" -->
+<div class="container form-horizontal">
     <section class="form-register">
-        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-            <table>
-                <tr>
-                  <th>
-                    <label for="red">Url a la red</label>
-                    <input class="controls" type="text" id="red" name="red" placeholder="url" required="required" [(ngModel)]="urlRed">
-                  </th>
-                 
-                </tr>
-                <tr>
-                    <th>
-                        <label for="imgRed">Logo Red</label>
-                        <input  class="files" type="file" id="imgRed" name="imgRed" [value]="urlRedImg" [(ngModel)]="urlRedImg" (change)="UploadImage($event)" accept=".png, .svg" [defaultValue]="urlRedImg">
-                        </th>
+      <form (ngSubmit)="onSubmit(f)" novalidate #f="ngForm">
+        <table>
+          <tr>
+            <th>
+              <label for="red">Url a la red</label>
+              <input class="controls" type="text" id="red" name="red" placeholder="url" required="required" [(ngModel)]="urlRed" #redInput="ngModel">
+              <div *ngIf="redInput.invalid && (showErrorMessage || redInput.dirty || redInput.touched)" class="error-message">El campo está incompleto</div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <label for="imgRed">Logo Red</label>
+              <input class="files" type="file" id="imgRed" name="imgRed" [(ngModel)]="urlRedImg" (change)="UploadImage($event)" accept=".png, .svg" [defaultValue]="urlRedImg" required #imgRedInput="ngModel">
+              <div *ngIf="imgRedInput.invalid && (showErrorMessage ||imgRedInput.dirty || imgRedInput.touched)" class="error-message">El campo está incompleto</div>
 
-                        <th  class="imagen" >
-                        <div class="contenedorImg">
-                            <img [src]="imageService.url"  [src]="urlRedImg"> 
-                        </div>
-                    </th>
-                </tr>
-              
-              </table>
-              <button type="submit" class="cta">Agregar Red</button>
-        </form>
+            </th>
+            <th class="imagen">
+              <div class="contenedorImg">
+                <img [src]="imageService.url" [src]="urlRedImg">
+              </div>
+            </th>
+          </tr>
+        </table>
+        <button type="submit" class="cta">Agregar Red</button>
+        <div *ngIf="showErrorMessage" class="error-message">Debe completar todos los campos obligatorios</div>
+      </form>
     </section>
-</div>
+  </div>

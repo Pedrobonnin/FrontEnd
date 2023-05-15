@@ -56,6 +56,6 @@ export class EditRedComponent {
      const id = this.activatedRouter.snapshot.params['id'];
      const name = "imgLogoRed_" + id;
      this.imageService.uploadImage($event, name)
-
+  
   }
 }

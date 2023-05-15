@@ -39,13 +39,13 @@
         <tr>
           <th>
             <label for="imgProy">Imagen del Proyecto</label>
-            <input class="files" type="file" id="imgProy" name="imgProy" [value]="imgUrlProy" [(ngModel)]="imgUrlProy"
+            <input class="files" type="file" id="imgProy" name="imgProy" [(ngModel)]="imgUrlProy"
               (change)="UploadImage($event)" accept=".png, .jpg, .gif, .tiff, .webp">
           </th>
 
           <th class="imagen">
             <div class="contenedorImg">
-              <img [src]="imageService.url" [src]="imgUrlProy">
+              <img  [src]="imageService.url" [src]="imgUrlProy" [src]="imgUrlProy">
             </div>
 
             <a (click)="DeleteImage(imageService.url)" (mouseover)="isCursorOnDeleteButton = true"

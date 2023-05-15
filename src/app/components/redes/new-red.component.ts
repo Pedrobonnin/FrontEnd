@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, of } from 'rxjs';
 import { Redes } from 'src/app/model/redes';
@@ -22,6 +23,16 @@ export class NewRedComponent {
 
   constructor(private sRed:RedesService, private activatedRouter: ActivatedRoute,
     private router: Router, public imageService : ImageService){}
+
+    showErrorMessage = false;
+
+    onSubmit(form: NgForm) {
+      if (!form.valid) {
+        this.showErrorMessage = true;
+      } else {
+        this.onCreate();
+      }
+    }
 
   ngOnInit():void{
     this.sRed.lista().subscribe(
