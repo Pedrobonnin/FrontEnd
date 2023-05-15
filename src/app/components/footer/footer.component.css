@@ -1,0 +1,22 @@
+/* FOOTER STYLING */
+footer {
+    width: 100%;
+    padding: 1.2rem;
+    border-top: 0.1rem solid rgb(38, 50, 67);
+  
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgb(143, 148, 164);
+  }
+  
+  footer span {
+    background: linear-gradient(
+      210deg,
+      rgba(29, 228, 255, 0.81) -6.94%,
+      rgba(59, 83, 168, 0.9) 97.22%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  

@@ -1,0 +1,78 @@
+
+div{
+    border-bottom: 1px solid rgb(38, 50, 67);
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+app-logo-ap {
+    margin-right: auto;
+    margin: 10px;
+  }
+  
+app-redes {
+    margin-left: auto;
+}
+
+
+.nav-link{
+    margin: 1.25em;
+}
+
+.nav-link a {
+    color: rgb(204, 213, 243);
+  }
+  
+  .nav-link a:hover {
+    color: rgba(24, 185, 207, 0.9);
+  }
+  
+  .nav-link:nth-child(4):hover {
+    transform: scale(1.08);
+    background: transparent;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-link:nth-child(4) a {
+    display: block;
+    padding: 0.8rem 2.5rem;
+    cursor: pointer;
+  }
+  
+  .nav-link:nth-child(4) a {
+    color: rgb(204, 213, 243);
+  }
+
+  
+@media (max-width: 780px) {
+  .nav-link{
+    display:none;
+  }
+
+  div{
+    margin-top: 0.625em;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+  }
+  .nav-link{
+    margin: -10px;
+    list-style-type: none;
+  }
+  
+  app-logo-ap {
+    margin-right: 0;
+    margin: 0;
+  }
+
+  app-redes {
+    margin-left: 0;
+  }
+
+}
+
+
+   

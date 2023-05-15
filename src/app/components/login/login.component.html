@@ -1,0 +1,18 @@
+
+<div class="login">
+	<h1>Hola , <span>{{ persona.nombre}}</span>   ! </h1>
+  
+
+   <form #f="ngForm" (ngSubmit)="onLogin()" novalidate > 
+    <table>
+      <tr>
+        <th>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" required="required" [(ngModel)]="nombreUsuario"/>
+        </th> 
+        <th > <input type="password" name="password" placeholder="Contraseña" required="required" [(ngModel)]="password"/> </th> 
+      </tr>
+    </table>
+    <button type="submit" class="cta" > Inicio </button>    
+  </form>
+
+</div>

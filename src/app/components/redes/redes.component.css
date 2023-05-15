@@ -1,0 +1,116 @@
+div{
+    margin: 0 10px;
+}
+
+.cuadro{
+  padding: 10px 10px 0 10px;
+  border: 0.1rem solid rgb(1, 241, 241);
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+
+
+.cta-box {
+  /* order: 2; */
+  width: auto;
+}
+
+.nav-social-links {
+  /* order: 1; */
+  width: auto;
+}
+
+img{
+    max-height: 6.25em;
+    padding: 4px;
+}
+
+
+.nav-social-links {
+    padding: 1.5rem 0 0 0;
+    width: 100%;
+    display: flex;
+
+}
+
+  .social-links img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .social-links img:hover {
+    transform: scale(1.03);
+    transition: transform 0.4s ease-in-out;
+  }
+
+.botones{
+  margin: 5px;
+}
+
+
+.icon-editar{
+    /* margin-right: 2px; */
+    width: 1em;
+    fill:#5C5F62;
+    transition: fill 0.2s ease-in-out;
+}
+
+.editar-green path {
+	fill: #d6d6d6;
+	transition: fill 0.2s ease-in-out !important;
+  }
+
+.editar-green:hover path {
+	fill: rgb(1, 255, 14) !important;
+}
+
+.icon-delete {
+    width: 1em;
+    fill:#5C5F62;
+    transition: fill 0.2s ease-in-out;
+    margin-left: 8px;
+    }
+
+    .delete-red path {
+    fill: #d6d6d6;
+    transition: fill 0.2s ease-in-out !important;
+    }
+
+    .delete-red:hover path {
+    fill: rgb(143, 1, 1) !important;
+    }
+
+
+
+    @media  (max-width: 768px) {
+      .cuadro{
+        padding: 10px 10px 0 10px;
+        border: 0.1rem solid rgb(1, 241, 241);
+      }
+
+      .container {
+        flex-direction: column;
+      }
+      
+      .cta-box {
+        width: auto;
+      }
+      
+      .nav-social-links {
+        width: auto;
+      }
+
+      .botones{
+        margin: 0px;
+      }
+      
+    }

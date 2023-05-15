@@ -1,0 +1,154 @@
+
+
+h2{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding: 1ram;
+}
+
+.contenedor {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.contenedor section table tbody tr td {
+	font-family: "GeneralSans 700";
+	color: rgb(178, 185, 207);
+  }
+  
+section{
+    width: 70%;
+}
+
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-weight: 100;
+}
+
+
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+table {
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.623);
+	white-space: nowrap;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    
+}
+thead{
+	
+	background: -webkit-linear-gradient(
+      top right,
+      rgba(18, 55, 246, 1),
+      rgba(9, 244, 244, 1)
+    );
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(34, 40, 49, 0.849);
+	color: rgb(178, 185, 207);
+}
+
+th {
+	text-align: left;
+	font-family: "GeneralSans 700";
+  	font-size: 1.8rem;
+}
+
+
+tbody tr:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255,255,255,0.2);
+    z-index: -1;
+}
+
+
+
+.cta-box {
+    font-size: 1.3rem;
+}
+
+
+.icon-editar{
+    width: 1.25em;
+	fill:#5C5F62;
+	transition: fill 0.2s ease-in-out;
+}
+
+.editar-green path {
+	fill: #d6d6d6;
+	transition: fill 0.2s ease-in-out !important;
+  }
+  
+.editar-green:hover path {
+	fill: rgb(0, 133, 7) !important;
+}
+
+
+
+.icon-delete {
+	width: 1.25em;
+	fill:#5C5F62;
+	transition: fill 0.2s ease-in-out;
+  }
+  
+.delete-red path {
+	fill: #d6d6d6;
+	transition: fill 0.2s ease-in-out !important;
+  }
+  
+.delete-red:hover path {
+	fill: rgb(143, 1, 1) !important;
+}
+
+
+.hand-cursor {
+	cursor: pointer;
+} 
+
+
+
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+		scroll-behavior: smooth;
+		overflow-x: auto;
+    }
+    tbody {
+		scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+
+    td:last-of-type {
+        border-bottom: none;
+    }
+}

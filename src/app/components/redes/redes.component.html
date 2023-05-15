@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="cta-box">
+        <a class="cta cta1" routerLink="nuevared/" *ngIf="isLogged">
+            Agregar
+        </a>
+    </div>
+    <li class="nav-social-links social-links" >
+        <section *ngFor="let r of red;" [ngClass]="{'cuadro': isLogged}">
+            <div class="separador-v" *ngIf="isLogged"></div>
+            <a   href={{r.urlRed}} target="_blank" class="social github">
+            <img src={{r.urlRedImg}} alt="GitHub Icon"> 
+            </a>
+            <div class="botones"> 
+                <a  *ngIf="isLogged" routerLink="/editred/{{r.idRed}}"
+                    (mouseover)="isCursorOnDeleteButton = true" 
+                    (mouseleave)="isCursorOnDeleteButton = false"
+                    [class.hand-cursor]="isCursorOnDeleteButton"
+                    [class.editar-green]="isCursorOnDeleteButton">
+                    <svg class="icon-editar" viewBox="0 0 20 20">
+                        <path d="M14.846 1.403l3.752 3.753.625-.626A2.653 2.653 0 0015.471.778l-.625.625zm2.029 5.472l-3.752-3.753L1.218 15.028 0 19.998l4.97-1.217L16.875 6.875z"/>
+                    </svg>
+                </a>    
+                <a  *ngIf="isLogged" (click)="delete(r.idRed)"
+                    (mouseover)="isCursorOnDeleteButton = true"
+                    (mouseleave)="isCursorOnDeleteButton = false"
+                    [class.hand-cursor]="isCursorOnDeleteButton"
+                    [class.delete-red]="isCursorOnDeleteButton">
+                    <svg class="icon-delete" viewBox="0 0 16 16">
+                        <path d="M12.566,8 L15.611,4.956 C16.031,4.535 16.031,3.853 15.611,3.434 L12.566,0.389 C12.146,-0.031 11.464,-0.031 11.043,0.389 L7.999,3.433 L4.955,0.389 C4.534,-0.031 3.852,-0.031 3.432,0.389 L0.388,3.434 C-0.034,3.854 -0.034,4.536 0.387,4.956 L3.431,8 L0.387,11.044 C-0.034,11.465 -0.034,12.147 0.388,12.567 L3.432,15.611 C3.852,16.032 4.534,16.032 4.955,15.611 L7.999,12.567 L11.043,15.611 C11.464,16.032 12.146,16.032 12.566,15.611 L15.611,12.567 C16.031,12.146 16.031,11.464 15.611,11.044 L12.566,8 L12.566,8 Z" />
+                    </svg>
+                </a>
+            </div> 
+      
+   
+        </section>
+       
+    </li>
+</div>

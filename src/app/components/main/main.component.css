@@ -1,0 +1,138 @@
+/************************
+/* MAIN SECTION STYLING 
+************************/
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+section{
+    width: 70%;
+}
+
+
+
+img:hover {
+    transform: scale(1.03);
+    transition: transform 0.4s ease-in-out;
+  }
+  
+.logo {
+    width: 8.25em;
+    position: relative;
+    margin: 10px;
+}
+
+
+
+.name-highlight {
+    background: -webkit-linear-gradient(
+      top right,
+      rgba(18, 55, 246, 1),
+      rgba(9, 244, 244, 1)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.salutation{
+    font-size: 1.25em;
+}
+
+h1{
+    font-size: 4rem;
+}
+  
+.declaration {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.4;
+    color: rgb(178, 185, 207);
+  }
+  
+
+.edit-box {
+    font-size: 16px;
+    font-family: "GeneralSans 700";  
+    color: rgb(178, 185, 207);
+    margin-bottom: 1.25rem;
+}
+
+.cta.cta1 {
+    font-size: 1.4rem; 
+  
+}
+
+.cta-box{
+    font-size: 1.875rem; 
+}
+
+p{
+    font-size: 2rem;
+}
+
+.icon-editar{
+    /* margin-left: .3125rem; */
+    width: 1em;
+	fill:#5C5F62;
+	transition: fill 0.2s ease-in-out;
+}
+
+.editar-green path {
+	fill: #d6d6d6;
+	transition: fill 0.2s ease-in-out !important;
+  }
+  
+.editar-green:hover path {
+	fill: rgb(1, 255, 14) !important;
+}
+
+
+.hand-cursor {
+	cursor: pointer;
+} 
+
+@media (max-width: 400px) {
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    section{
+        width: 100%;
+    }
+
+    .cta-box{
+        font-size: .625em;
+    }
+
+    .logo {
+        width: 9.25rem;
+        position: relative;
+        margin-left: 1.75rem;
+    }
+
+    
+    .cta-box .cta2 {
+        display: none;
+    }
+
+    .salutation{
+        font-size: 2rem;
+    }    
+
+    h1{
+        font-size: 3rem;
+    }
+   
+    .declaration{
+        font-size: 2.1rem;
+    }
+
+    p{
+        font-size: 2.1rem;
+    }
+}    

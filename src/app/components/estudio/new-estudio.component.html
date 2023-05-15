@@ -1,0 +1,33 @@
+<div class="container">
+    <section class="form-register">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    
+        <div>
+          <label for="titulo">Titulo</label>
+          <input class="controls" type="text" id="titulo" name="titulo" placeholder="Titulo" required="required"
+            [(ngModel)]="titulo">
+        </div>
+        <div>
+            <label for="contacto">Nivel</label>
+            <input class="controls" type="text" id="nivel" name="nivel" placeholder="Nivel de estudio"
+              required="required" [(ngModel)]="nivel">
+          </div>
+        <div>
+          <label for="tiempo">Tiempo</label>
+          <input class="controls" type="text" class="" id="tiempo" name="tiempo" placeholder="Tiempo de Estudio"
+            required="required" [(ngModel)]="tiempo">
+        </div>
+        <div>
+            <label for="escuela">Escuela</label>
+            <input class="controls" type="text" id="escuela" name="escuela" placeholder="Nombre de la Escuela"
+              required="required" [(ngModel)]="escuela">
+          </div>
+        <div>
+          <label for="Localidad">Localidad</label>
+          <input class="controls" type="text" id="localidad" name="localidad" placeholder="Localidad"
+            required="required" [(ngModel)]="localidad">
+        </div>
+        <button type="submit" class="cta">Agregar</button>
+      </form>
+    </section>
+  </div>

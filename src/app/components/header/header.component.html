@@ -1,0 +1,9 @@
+<div>
+    <app-logo-ap></app-logo-ap>
+    <app-redes></app-redes>
+
+    <div class="nav-link">
+            <a href="/login"  *ngIf="!isLogged" >Acceder</a>
+            <a href="/login" (click)="onLogOut()" *ngIf="isLogged" >Cerrar sesion</a> 
+    </div>
+</div>

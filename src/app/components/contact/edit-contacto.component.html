@@ -1,0 +1,28 @@
+<div class="container form-horizontal" *ngIf="contacto">
+    <section class="form-register">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <table>
+                <tr>
+                  <th colspan="2">
+                    <label for="desc">Descripcion</label>
+                    <textarea class="controls" type="text" id="desc" name="desc" placeholder="Descripcion" required="required" [(ngModel)]="contacto.desCont"  (input)="checkLength('desc',150)"></textarea>
+                  </th>
+                </tr>
+                <tr>
+                    <th>
+                      <label for="email">Email</label>
+                      <input class="controls" type="text" id="email" name="email" placeholder="Email" required="required" [(ngModel)]="contacto.email">
+                    </th>
+                    <th>
+                      <label for="telefono">Telefono</label>
+                      <input class="controls" type="text" id="telefono" name="telefono" placeholder="Telefono" required="required" [(ngModel)]="contacto.phone">
+                    </th>
+                  </tr>
+                
+              </table>
+              <div class="button-container">
+                  <button type="submit" class="cta">Actualizar Contacto</button>
+              </div>
+        </form>
+    </section>
+</div>

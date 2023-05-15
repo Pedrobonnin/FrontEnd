@@ -1,0 +1,46 @@
+
+<div class="imgContenedor">
+    <a *ngIf="persona.imglogo">
+    <img src={{persona.imglogo}} alt="Logo" class="logo">
+    </a>
+</div>
+
+<main  class="contenedor">   
+    
+    <section>
+        <div class="edit-box">
+            <a  class="cta-box cta cta1" *ngIf="isLogged" routerLink="/editPerfil/{{persona.id}}"
+                (mouseover)="isCursorOnDeleteButton = true" 
+                (mouseleave)="isCursorOnDeleteButton = false"
+                [class.hand-cursor]="isCursorOnDeleteButton"
+                [class.editar-green]="isCursorOnDeleteButton">
+                Editar
+                <svg class="icon-editar" viewBox="0 0 20 20" >
+                    <path d="M14.846 1.403l3.752 3.753.625-.626A2.653 2.653 0 0015.471.778l-.625.625zm2.029 5.472l-3.752-3.753L1.218 15.028 0 19.998l4.97-1.217L16.875 6.875z"/>
+                </svg>
+            </a>
+        </div>
+        <div 
+        (mouseover)="isCursorOnDeleteButton = true" 
+        (mouseleave)="isCursorOnDeleteButton = false"
+            >
+            <span class="salutation">¡Hola!</span>
+        <h1>
+            Yo Soy <span class="name-highlight">{{persona.nombre}} {{persona.apellido}}</span>.
+        </h1>
+
+        <p class="declaration">{{persona.profesion}}</p>
+
+        <p>
+            {{persona.descripcion}}
+        </p>
+
+        <div class="cta-box">
+            <a href="#contact" class="cta cta1">Contacto</a>
+            <a href={{persona.cv}}
+                target="_blank" class="cta cta2">CV</a>
+        </div>
+        </div>
+        
+    </section>
+</main>

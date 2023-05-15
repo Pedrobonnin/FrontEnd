@@ -1,0 +1,29 @@
+<div class="container form-horizontal" > <!-- *ngIf="proy" -->
+    <section class="form-register">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <table>
+                <tr>
+                  <th>
+                    <label for="red">Url a la red</label>
+                    <input class="controls" type="text" id="red" name="red" placeholder="url" required="required" [(ngModel)]="urlRed">
+                  </th>
+                 
+                </tr>
+                <tr>
+                    <th>
+                        <label for="imgRed">Logo Red</label>
+                        <input  class="files" type="file" id="imgRed" name="imgRed" [value]="urlRedImg" [(ngModel)]="urlRedImg" (change)="UploadImage($event)" accept=".png, .svg" [defaultValue]="urlRedImg">
+                        </th>
+
+                        <th  class="imagen" >
+                        <div class="contenedorImg">
+                            <img [src]="imageService.url"  [src]="urlRedImg"> 
+                        </div>
+                    </th>
+                </tr>
+              
+              </table>
+              <button type="submit" class="cta">Agregar Red</button>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,65 @@
+<div class="container form-horizontal" *ngIf="persona">
+  <section class="form-register">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <table class="tabla">
+        <tr>
+          <th>
+            <label for="nombre">Nombre</label>
+            <input class="controls" type="text" id="nombre" name="Nombre" placeholder="Nombre" required="required"
+              [(ngModel)]="persona.nombre">
+          </th>
+          <th>
+            <label for="apellido">Apellido</label>
+            <input class="controls" type="text" class="" id="puesto" name="apellido" placeholder="Puesto"
+              required="required" [(ngModel)]="persona.apellido">
+          </th>
+          <th>
+            <label for="profesion">Profesion</label>
+            <input class="controls" type="text" id="contacto" name="profesion" placeholder="profesion"
+              required="required" [(ngModel)]="persona.profesion">
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">
+            <label for="cv">CV</label>
+            <input class="controls" type="text" id="cv" name="cv" placeholder="cv" required="required"
+              [(ngModel)]="persona.cv">
+          </th>
+        </tr>
+        <tr>
+          <th colspan="3">
+            <label for="descripcion">Descripcion</label>
+            <input class="controls" type="text" id="descripcion" name="descripcion" placeholder="descripcion"
+              required="required" [(ngModel)]="persona.descripcion" (input)="checkLength('descripcion',150)">
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <label for="img">Logo</label>
+            <input class="files" type="file" id="img" name="img" [value]="persona.imglogo" [(ngModel)]="persona.imglogo"
+              (change)="UploadImage($event)" accept=".png, .svg">
+          </th>
+          <th class="imagen">
+            <div class="contenedorImg">
+              <img [src]="imageService.url" [src]="persona.imglogo" width="100px">
+            </div>
+          </th>
+          <a (click)="DeleteImage(persona.imglogo)" (mouseover)="isCursorOnDeleteButton = true"
+              *ngIf="(imageService.url || persona.imglogo)" (mouseleave)="isCursorOnDeleteButton = false"
+              [class.hand-cursor]="isCursorOnDeleteButton" [class.delete-red]="isCursorOnDeleteButton"
+              title="Eliminar Imagen">
+
+              <svg class="icon-delete" viewBox="0 0 16 16">
+                <path
+                  d="M12.566,8 L15.611,4.956 C16.031,4.535 16.031,3.853 15.611,3.434 L12.566,0.389 C12.146,-0.031 11.464,-0.031 11.043,0.389 L7.999,3.433 L4.955,0.389 C4.534,-0.031 3.852,-0.031 3.432,0.389 L0.388,3.434 C-0.034,3.854 -0.034,4.536 0.387,4.956 L3.431,8 L0.387,11.044 C-0.034,11.465 -0.034,12.147 0.388,12.567 L3.432,15.611 C3.852,16.032 4.534,16.032 4.955,15.611 L7.999,12.567 L11.043,15.611 C11.464,16.032 12.146,16.032 12.566,15.611 L15.611,12.567 C16.031,12.146 16.031,11.464 15.611,11.044 L12.566,8 L12.566,8 Z" />
+              </svg>
+          </a>
+        </tr>
+        
+      </table>
+      <div class="button-container">
+        <button type="submit" class="cta">Actualizar Persona</button>
+      </div>
+    </form>
+  </section>
+</div>

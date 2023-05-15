@@ -1,0 +1,157 @@
+@media screen and (min-width: 1024px) {
+    body > * {
+      width: 85vw;
+    }
+  
+    header {
+      width: 100%;
+      padding: 2rem 3.5rem;
+    }
+  
+    .logo {
+      width: 17.5rem;
+    }
+  
+    main section {
+      width: 52rem;
+    }
+  
+    h1 {
+      font-size: 5.5rem;
+    }
+  
+    h2 {
+      font-size: 3.2rem;
+    }
+  
+    .declaration {
+      font-size: 3.2rem;
+    }
+  
+    #about .separator + div {
+      width: 48vw;
+    }
+  
+    .separator ~ .project {
+      position: relative;
+      min-width: 100%;
+      gap: 2.5rem;
+      margin-top: 4.5rem;
+      background: none;
+    }
+  
+    .separator ~ .project:nth-child(even) {
+      flex-direction: row;
+    }
+  
+    .separator ~ .project:nth-child(odd) {
+      flex-direction: row-reverse;
+  
+      text-align: right;
+    }
+  
+    .project {
+      box-shadow: none;
+    }
+  
+    .project-details-box {
+      position: relative;
+      margin-top: 2.5rem;
+      padding: 0;
+      max-width: 50%;
+    }
+  
+    .project-main-info {
+      position: relative;
+      padding: 2rem;
+      border-radius: 0.8rem;
+      background: rgb(38, 50, 67);
+      box-shadow: 0 1rem 3rem 0 rgba(27, 27, 27, 0.2);
+  
+      z-index: 1;
+    }
+  
+    .project-main-info::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      border-radius: 0.8rem;
+      transform: skew(-16deg);
+      background-color: rgb(38, 50, 67);
+      z-index: -2;
+    }
+  
+    .separator ~ .project:nth-child(even) .project-main-info::before {
+      top: 0;
+      left: 3.7rem;
+    }
+  
+    .separator ~ .project:nth-child(odd) .project-main-info::before {
+      top: 0;
+      right: 2.7rem;
+      bottom: 0;
+      border-radius: 0.8rem;
+      transform: skew(-10deg);
+      background-color: rgb(38, 50, 67);
+      z-index: -2;
+    }
+  
+    .separator ~ .project:nth-child(odd) .project-links {
+      justify-content: flex-end;
+    }
+  
+    .separator ~ .project:nth-child(even) .project-image-box {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      align-self: stretch;
+    }
+  
+    .separator ~ .project:nth-child(odd) .project-image-box {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      align-self: stretch;
+    }
+  
+    .separator ~ .project.project3 .project-main-info::before {
+      left: 3.7rem;
+    }
+  
+    .project-tools p {
+      display: inline-block;
+    }
+  
+    .project-image-box::before {
+      top: -3rem;
+      bottom: 0;
+      height: 120%;
+    }
+  
+    .project-img-link > img {
+      border-radius: 1.2rem;
+    }
+  
+    .project-img-link > img:hover {
+      transform: scale(1.05);
+    }
+  
+    
+
+   
+    .img-box {
+      position: relative;
+      right: 0;
+      top: -7.5rem;
+    }
+  
+    #contact div {
+      width: 40vw;
+      padding-right: 3rem;
+    }
+  }
+  

@@ -1,0 +1,18 @@
+<div class="formulario">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <table>
+            
+            <tr>
+                <th>
+                    <input  class="controls" type="text" id="t1" name="t1" placeholder="Tecnologia Dominada" required="required" [(ngModel)]="tl.tool"  (input)="checkLength('t1',15)">
+                
+                </th> 
+            </tr> 
+            <tr>
+                <th>
+                    <button type="submit" class="cta">Actualizar</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+</div>

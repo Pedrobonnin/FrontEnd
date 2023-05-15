@@ -1,0 +1,71 @@
+<div class="container form-horizontal"> <!-- *ngIf="proy" -->
+  <section class="form-register">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <table>
+        <tr>
+          <th>
+            <label for="nombre">Nombre del Proyecto</label>
+            <input class="controls" type="text" id="nombre" name="nombre" placeholder="Nombre del Proyecto"
+              required="required" [(ngModel)]="prov.nameProy">
+          </th>
+          <th>
+            <label for="repositorio">Url Repositorio</label>
+            <input class="controls" type="text" id="repositorio" name="repositorio"
+              placeholder="Url del Repositorio al proyecto" required="required" [(ngModel)]="prov.repoUrlProy">
+          </th>
+        </tr>
+
+        <tr>
+          <th colspan="2">
+            <label for="detalle">Detalle</label>
+            <textarea class="controls" id="detalle" name="detalle" placeholder="Detalle del proyecto"
+              required="required" [(ngModel)]="prov.detailsProy" (input)="checkLength('detalle',300)"></textarea>
+          </th>
+        </tr>
+
+
+        <tr>
+          <th>
+            <label for="sitioDemo">Sitio Demo</label>
+            <input class="controls" type="text" id="sitioDemo" name="sitioDemo" placeholder="Demo del Proyecto"
+              required="required" [(ngModel)]="prov.siteUrlProy">
+          </th>
+          <th>
+            <label for="toolsProy">Tools</label>
+            <input class="controls" type="text" id="toolsProy" name="toolsProy" placeholder="Herramientas de desarollo"
+              required="required" [(ngModel)]="prov.toolsProy">
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+            <label for="imgProy">Imagen del Proyecto</label>
+            <input class="files" type="file" id="imgProy" name="imgProy" [value]="prov.imgUrlProy"
+              [(ngModel)]="prov.imgUrlProy" (change)="UploadImage($event)" accept=".png, .jpg, .gif, .tiff, .webp"
+              [defaultValue]="prov.repoUrlProy">
+          </th>
+          <th class="imagen">
+            <div class="contenedorImg">
+              <img [src]="imageService.url" [src]="prov.imgUrlProy">
+            </div>
+
+            <a (click)="DeleteImage(prov.imgUrlProy)" (mouseover)="isCursorOnDeleteButton = true"
+              *ngIf="(imageService.url || prov.imgUrlProy)"
+              (mouseleave)="isCursorOnDeleteButton = false" [class.hand-cursor]="isCursorOnDeleteButton"
+              [class.delete-red]="isCursorOnDeleteButton" title="Eliminar Imagen">
+
+              <svg class="icon-delete" viewBox="0 0 16 16">
+                <path
+                  d="M12.566,8 L15.611,4.956 C16.031,4.535 16.031,3.853 15.611,3.434 L12.566,0.389 C12.146,-0.031 11.464,-0.031 11.043,0.389 L7.999,3.433 L4.955,0.389 C4.534,-0.031 3.852,-0.031 3.432,0.389 L0.388,3.434 C-0.034,3.854 -0.034,4.536 0.387,4.956 L3.431,8 L0.387,11.044 C-0.034,11.465 -0.034,12.147 0.388,12.567 L3.432,15.611 C3.852,16.032 4.534,16.032 4.955,15.611 L7.999,12.567 L11.043,15.611 C11.464,16.032 12.146,16.032 12.566,15.611 L15.611,12.567 C16.031,12.146 16.031,11.464 15.611,11.044 L12.566,8 L12.566,8 Z" />
+              </svg>
+            
+            </a>
+          </th>
+        </tr>
+
+      </table>
+      <button iddel type="submit" class="cta">Actualizar Proyecto</button>
+
+    </form>
+  </section>
+</div>

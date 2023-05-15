@@ -1,0 +1,44 @@
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    <div class="container" *ngIf="acercaDe">
+        <div class="table-container">
+            <section class="form-register">
+
+                <table>
+                    <tr>
+                        <th colspan="2">
+                            <label for="acerca-de">Descripcion</label>
+                            <textarea class="controls" type="text" id="acerca-de" name="acerca-de"
+                                placeholder="acerca de..." required="required" [(ngModel)]="acercaDe.aboutText"
+                                (input)="checkLength('acerca-de',2500)"></textarea>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <label for="img">Imagen de Perfil</label>
+                            <input class="files" type="file" id="img" name="img" [(ngModel)]="acercaDe.imgPerfil"
+                                (change)="UploadImage($event)" accept=".png, .jpg, .gif, .tiff, .webp"
+                           >
+                        </th>
+                    </tr>
+                </table>
+
+            </section>
+            <div class="contenedorImg">
+                <img [src]="imageService.url" [src]="acercaDe.imgPerfil" width="100px">
+                <a (click)="DeleteImage(acercaDe.imgPerfil)" (mouseover)="isCursorOnDeleteButton = true"
+                    *ngIf="(imageService.url || acercaDe.imgPerfil)" (mouseleave)="isCursorOnDeleteButton = false"
+                    [class.hand-cursor]="isCursorOnDeleteButton" [class.delete-red]="isCursorOnDeleteButton"
+                    title="Eliminar Imagen">
+
+                    <svg class="icon-delete" viewBox="0 0 16 16">
+                        <path
+                            d="M12.566,8 L15.611,4.956 C16.031,4.535 16.031,3.853 15.611,3.434 L12.566,0.389 C12.146,-0.031 11.464,-0.031 11.043,0.389 L7.999,3.433 L4.955,0.389 C4.534,-0.031 3.852,-0.031 3.432,0.389 L0.388,3.434 C-0.034,3.854 -0.034,4.536 0.387,4.956 L3.431,8 L0.387,11.044 C-0.034,11.465 -0.034,12.147 0.388,12.567 L3.432,15.611 C3.852,16.032 4.534,16.032 4.955,15.611 L7.999,12.567 L11.043,15.611 C11.464,16.032 12.146,16.032 12.566,15.611 L15.611,12.567 C16.031,12.146 16.031,11.464 15.611,11.044 L12.566,8 L12.566,8 Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="submit" class="cta">Actualizar Acerca</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+<div class="separador" *ngIf="isLogged"></div>
+<div  class="contenedor">
+    <section id="contact">
+        <div class="edit-box">
+            <a  class="cta-box cta cta1" *ngIf="isLogged" routerLink="/editContacto/{{contacto.idCont}}"
+                (mouseover)="isCursorOnDeleteButton = true" 
+                (mouseleave)="isCursorOnDeleteButton = false"
+                [class.hand-cursor]="isCursorOnDeleteButton"
+                [class.editar-green]="isCursorOnDeleteButton">
+                Editar
+                <svg class="icon-editar" viewBox="0 0 20 20" >
+                    <path d="M14.846 1.403l3.752 3.753.625-.626A2.653 2.653 0 0015.471.778l-.625.625zm2.029 5.472l-3.752-3.753L1.218 15.028 0 19.998l4.97-1.217L16.875 6.875z"/>
+                </svg>
+            </a>
+        </div>
+        <div>
+            <span>¿Próximos pasos?</span>
+
+            <h4>Ponte en Contacto</h4>
+
+            <p>
+                {{contacto.desCont}}
+            </p>
+            <button (click)="togglePhoneVisibility()" class="cta cta2">{{ showPhone ? 'Ocultar Teléfono' : 'Mostrar Teléfono' }}</button>
+
+
+            <a href="mailto:{{contacto.email}}" class="cta cta2">Contactate!</a>
+            <p *ngIf="showPhone">  {{contacto.phone}}</p> 
+        </div>
+
+        <app-redes></app-redes>
+    </section>
+</div>

@@ -1,0 +1,18 @@
+<div class="formulario">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <table>
+            
+            <tr>
+                <th>
+                    <input  class="controls" type="text" id="t" name="t" placeholder="Nueva Tecnologia Dominada" required="required" [(ngModel)]="tool">
+                
+                </th> 
+            </tr> 
+            <tr>
+                <th>
+                    <button type="submit" class="cta">Agregar</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+</div>

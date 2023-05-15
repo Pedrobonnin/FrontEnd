@@ -1,1 +1,162 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(./font-root-styles/general-sans.css);
+@import url(./font-root-styles/okinesans.css);
+@import url(./font-root-styles/satoshi.css);
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgb(34, 40, 49);
+  font-family: "Satoshi 400";
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgb(204, 213, 243);
+}
+
+header,
+main,
+main ~ section,
+footer {
+  padding: 2rem;
+}
+
+h1,
+.declaration {
+  margin: 0;
+  font-family: "GeneralSans 700";
+  font-size: 3.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-family: "Satoshi 700";
+}
+
+h3 {
+  font-family: "Satoshi 900";
+  font-size: 2rem;
+}
+
+.separator {
+  margin-bottom: 1rem;
+}
+
+.separador{
+  border-top: 0.1rem solid rgb(1, 241, 241);
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.featured-projects-box h3 {
+  background: -webkit-linear-gradient(
+    90.98deg,
+    rgba(24, 185, 207, 0.9) -2.14%,
+    #6688ff 103.54%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+a {
+  text-decoration: none;
+}
+
+.declaration {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  color: rgb(178, 185, 207);
+}
+
+.cta,
+.cta1 {
+  font-family: "Satoshi 700";
+}
+
+.cta {
+  display: inline-block;
+ 
+  margin: 0.5rem 1.8rem;
+  margin-left: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    99.41deg,
+    #002cc7 -39.51%,
+    rgba(24, 185, 207, 0.9) 116.85%
+  );
+
+  text-align: center;
+  text-decoration: none;
+  color: rgb(204, 213, 243);
+}
+
+.cta1 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
+}
+
+.cta2,
+.nav-link:nth-child(7) {
+  position: relative;
+  border-radius: 1rem;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(24, 185, 207, 0.9) 0%,
+    #3b53a8 100%
+  );
+  background: rgb(34, 40, 49);
+}
+
+.cta2::after,
+.nav-link:nth-child(7)::after {
+  position: absolute;
+  content: "";
+  top: -1.8px;
+  bottom: -1.8px;
+  left: -1.8px;
+  right: -1.8px;
+  background: linear-gradient(180deg, rgba(24, 185, 207, 0.9) 0%, #3b53a8 100%);
+  z-index: -1;
+  border-radius: 1.5rem;
+}
+
+.main-social-links {
+  display: none;
+}
+
+@media (min-width: 780px){
+  /*scroll en modo oscuro */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #555; /* Ajusta el color del scroll*/
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #333; /* Ajusta el color del fondo del scroll*/
+  }
+}

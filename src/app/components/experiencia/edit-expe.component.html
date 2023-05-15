@@ -1,0 +1,24 @@
+
+<div class="container"  *ngIf="expLab">
+  <section class="form-register">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div>
+        <label for="empresa">Empresa</label>
+        <input class="controls" type="text" class="" id="empresa" name="empresa" placeholder="Nombre de la Empresa" required="required" [(ngModel)]="expLab.empresa">
+      </div>
+      <div>
+        <label for="puesto">Puesto</label>
+        <input class="controls" type="text" class="" id="puesto" name="puesto" placeholder="Puesto" required="required" [(ngModel)]="expLab.puesto">
+      </div>
+      <div >
+        <label for="tiempo">Tiempo</label>
+        <input class="controls" type="text" class="" id="tiempo" name="tiempo" placeholder="Tiempo de trabajo" required="required"  [(ngModel)]="expLab.tiempo">
+      </div>
+      <div>
+        <label for="contacto">Contacto</label>
+        <input class="controls" type="text" class="" id="contacto" name="contacto" placeholder="Contacto de la Empresa" required="required"  [(ngModel)]="expLab.contacto">
+      </div>
+      <button type="submit" class="cta"  >Actualizar</button>
+    </form>
+  </section>
+</div>

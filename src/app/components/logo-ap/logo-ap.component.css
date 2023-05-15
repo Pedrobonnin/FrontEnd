@@ -1,0 +1,13 @@
+
+
+#logo{
+    max-width: 15.5rem;
+    min-width: 5.5rem;
+}
+
+img:hover {
+    transform: scale(1.06);
+    transition: transform 0.4s ease-in-out;
+   
+  }
+

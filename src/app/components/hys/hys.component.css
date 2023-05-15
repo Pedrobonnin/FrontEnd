@@ -1,0 +1,135 @@
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.55em;
+   
+}
+
+section{
+    width: 70%;
+}
+
+h2{
+    margin-top: .625rem;
+}
+
+
+.sectionSkill{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-box {
+    font-size: 1.3rem;   
+   
+}
+
+.contenedorCircle{
+    display: flex; 
+}
+  
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: 85px;
+  margin-right: 5px;
+}
+
+
+.circle {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 200px;
+    margin: 1.25rem 1.25rem 3.125rem 1.25rem;
+  }
+  
+
+
+.icon-editar{
+    width: 1.25em;
+    fill:#5C5F62;
+    transition: fill 0.2s ease-in-out;
+    margin-right: .93em;
+}
+
+.editar-green path {
+	fill: #d6d6d6;
+	transition: fill 0.2s ease-in-out !important;
+  }
+  
+.editar-green:hover path {
+	fill: rgb(0, 133, 7) !important;
+}
+
+
+
+.icon-delete {
+	width: 1.25em;
+	fill:#5C5F62;
+	transition: fill 0.2s ease-in-out;
+  margin-left: .93em;
+}
+  
+.delete-red path {
+	fill: #d6d6d6;
+	transition: fill 0.2s ease-in-out !important;
+  }
+  
+.delete-red:hover path {
+	fill: rgb(143, 1, 1) !important;
+}
+
+
+.hand-cursor {
+	cursor: pointer;
+} 
+
+
+
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+		scroll-behavior: smooth;
+		overflow-x: auto;
+    }
+    tbody {
+		scroll-behavior: smooth;
+        overflow-y: scroll;
+        height: 100%; /* ajusta este valor según tus necesidades */
+    }
+   
+   
+    td:last-of-type {
+        border-bottom: none;
+    }
+
+    section{
+      width: 90%;
+  }
+  
+}
+
+@media screen and (max-width: 668px) {
+    .sectionSkill {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .circle {
+      margin-right: 4.375em;
+    
+    }
+  }
+  
+  
+
+
+  

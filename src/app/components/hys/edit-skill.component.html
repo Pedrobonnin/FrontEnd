@@ -1,0 +1,25 @@
+<div class="container" *ngIf="skill">
+    <section class="form-register">
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div>
+          <label for="Nueva Skill">Nueva Skill</label>
+          <input class="controls" type="text" id="Nueva Skill" name="Nueva Skill" placeholder="Nueva Habilidad"
+            required="required" [(ngModel)]="skill.unaSkill">
+        </div>
+        <div>
+          <label for="porcentaje">Porcentaje de Avilidad</label>
+          <input class="controls" type="text" id="pporcentaje" name="porcentaje" placeholder="porcentaje de Habilidad" required="required"
+            [(ngModel)]="skill.porcentaje">
+        </div>
+        <div>
+          <label for="outerStrokeColor">Color de aro exterior</label>
+          <input class="controls" type="text" id="outerStrokeColor" name="outerStrokeColor"
+                 placeholder="Color de aro exterior del circulo" required="required"
+                 [(colorPicker)]="color" [style.background]="color"  
+                 [(ngModel)]="skill.outerStrokeColor" (ngModelChange)="onColorSelected($event)"
+                 [ngStyle]="{ 'background': color ? color : skill.outerStrokeColor }">
+        </div>
+        <button type="submit" class="cta">Actualizar Skill</button>
+      </form>
+    </section>
+  </div>

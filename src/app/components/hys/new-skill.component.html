@@ -1,0 +1,26 @@
+<div class="container">
+    <section class="form-register">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div>
+          <label for="Nueva Skill">Nueva Skill</label>
+          <input class="controls" type="text" id="Nueva Skill" name="Nueva Skill" placeholder="Nueva Skill"
+            required="required" [(ngModel)]="unaSkill">
+        </div>
+        <div>
+          <label for="porcentaje">Porcentaje de Avilidad</label>
+          <input class="controls" type="text" id="porcentaje" name="porcentaje" placeholder="Porcentaje" required="required"
+            [(ngModel)]="porcentaje">
+        </div>
+        <div>
+          <label for="outerStrokeColor">Color de aro exterior</label>
+          <div>
+            <input  [(ngModel)]="outerStrokeColor" [(colorPicker)]="color"
+                   [style.background]="color" placeholder="Color de aro exterior del circulo">
+          </div>
+        </div>
+
+        <button type="submit" class="cta">Agregar Skill</button>
+      </form>
+      
+    </section>
+  </div>

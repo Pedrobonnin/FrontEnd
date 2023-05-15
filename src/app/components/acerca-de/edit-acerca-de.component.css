@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+button{
+    border: none; /* quita el borde del botón */
+    box-shadow: none; /* quita la sombra del botón */
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+}
+
+.cta {
+    width: auto;
+    margin:10px;
+    font-size: 15px;
+    line-height: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.files::before {
+  content: "Elegir archivo";
+  color:rgb(210, 219, 245);
+  background-color: rgb(25, 29, 34) ;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(115, 119, 131);;
+}
+
+::-webkit-file-upload-button {
+  visibility: hidden;
+  display: none;
+}
+
+
+
+.container {
+  margin:  0 auto;
+  padding: 4rem;
+  border: 2px solid rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; 
+  max-width: auto; 
+  box-sizing: border-box;
+}
+
+
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedorImg {
+    margin-right: 20px;
+}
+
+.form-register {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.container h1 {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+img{
+  width: auto;
+  max-width: 200px;
+}
+
+
+.form-register label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-register input {
+  display: block;
+}
+
+textarea {
+    font-family: "Satoshi 700";
+    width: 100%;
+    resize: none;
+    resize: vertical;
+    min-height: 200px;
+    background: rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: rgb(178, 185, 207);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+input {
+  font-family:  "Satoshi 700";
+  width: 100%;
+  margin: 0px 10px 10px 0px;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: rgb(178, 185, 207);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
+    0 1px 1px rgba(255, 255, 255, 0.2);
+  -webkit-transition: box-shadow 0.5s ease;
+  -moz-transition: box-shadow 0.5s ease;
+  -o-transition: box-shadow 0.5s ease;
+  -ms-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}
+input:focus {
+  box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
+    0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+div.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+
+.contenedorImg {
+  width: auto; /* Ajusta el ancho del contenedor*/
+  height: auto;
+  max-height: 400px; /* Ajusta la altura del contenedor*/
+  overflow: auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  width: auto;
+  padding: 8px;
+  text-align: left;
+}
+
+th{
+  padding: 0px 20px 20px 0px;
+}
+
+
+
+.icon-delete {
+  width: 1.875em;
+  fill:#5C5F62;
+  transition: fill 0.2s ease-in-out;
+  margin: .93em;
+  }
+  
+  .delete-red path {
+  fill: #d6d6d6;
+  transition: fill 0.2s ease-in-out !important;
+  }
+  
+  .delete-red:hover path {
+  fill: rgb(143, 1, 1) !important;
+  }
+  
+  
+  .hand-cursor {
+  cursor: pointer;
+  } 
+
+
+@media (max-width: 768px) {
+
+  .container {
+    margin: 0;
+    margin-bottom: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.171);
+    border-radius: 5px;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%; 
+    max-width: none; 
+    box-sizing: border-box;
+  }
+
+  .table-container {
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .contenedorImg {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .form-register {
+        width: 100%;
+    }
+
+    textarea{
+      max-width: auto;
+     
+      height: 400px;
+    }
+
+    table th,
+    table td {
+      display: block;
+      
+      padding: 8px;
+    }
+    table th {
+      text-align: left;
+      padding: 0px 10px;
+    }
+    table td {
+      text-align: center;
+    }
+
+    .cta {
+      width: 100%;
+      margin: 5px;
+  }
+  
+}
